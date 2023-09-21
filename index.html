@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Using icon on safari too, not only chrome -->
+    <link rel="mask-icon" href="img/icon-atrium.png" color="#000000">
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Atrium</title>
+</head>
+
+    <body>
+        <header>
+            <!-- Title class with logo -->
+            <div class="title">
+                <img src="img/atrium_logo.png">
+            </div>
+             <!-- Background class with background image -->
+            <div class="background">
+                <img src="img/background_image.jpeg">
+            </div>
+        </header>
+
+        <!-- Add button  -->
+        <div class="divButtons">
+            <button class = "openPopupBtn" id="addGlassesOpenButton">Add new glasses</button>
+            <button class = "openPopupBtn" id="addTierOpenButton">Add new tier</button>
+        </div>
+        <!-- Glasses Pop up -->
+        <div id="glassesPopup" class="popup">
+            <div class="popup-content">
+                <!-- Glasses Pop-up Content -->
+                <h2>Add new Glasses</h2>
+                <section class="newItem">
+                    <div class="form-row">
+                        <label for="newInput">Add new Glasses:</label>
+                        <input type="text" id="newInput">
+                    </div>
+                    <div class="form-row">
+                        <label for="newGenderTarget">Gender Target:</label>
+                        <select id="newGenderTarget">
+                            <option disabled selected>Select an option</option>
+                            <option value="U" selected>Unisex</option>
+                            <option value="M">Male</option>
+                            <option value="F">Female</option>
+                        </select>
+                    </div>
+                    <div class="form-row">
+                        <label for="newTierOptions">Select a Tier:</label>
+                        <select id="newTierOptions">
+                            <option value="" disabled selected>Select an option</option>
+                        </select>
+                    </div>
+                    <div class="form-row-switch">
+                        <label id="testando" for="newIsSunGlasses">Sunglasses:</label>
+                        <label class="switch" for="newIsSungGlasses">
+                            <input type="checkbox" id="newIsSungGlasses" placeholder="SunGlasses:" value="true" checked>
+                            <span></span>
+                        </label>
+                    </div>
+                    <div class="form-row">
+                        <label for="newFrameMaterial">Frame Material:</label>
+                        <input type="text" id="newFrameMaterial">
+                    </div>
+                    <div class="form-row">
+                        <label for="newImage">Image Url:</label>
+                        <input type="text" id="newImage">
+                    </div>
+                    <div class="form-row">
+                        <label for="newDescr">Description:</label>
+                        <input type="text" id="newDescr">
+                    </div>
+                    <div class="form-row">
+                        <label for="newQuantity">Quantity:</label>
+                        <input type="number" id="newQuantity" name="Quantity" min="0" value="0">
+                    </div>
+                    <div class="form-row">
+                        <label for="newColor">Color:</label>
+                        <input type="text" id="newColor">
+                    </div>
+                    <span onclick="newGlasses()" class="addBtn">Add</span>
+                </section>
+                <button class="close-button" id="closeGlassesPopupBtn"></button>
+            </div>
+        </div>
+
+        <!-- Tier Pop up -->
+        <div id="tierPopup" class="popup">
+            <div class="popup-content">
+                <!-- Tier Pop-up Content -->
+                <h2>Add new Tier</h2>
+                <section class="newItem">
+                    <div class="form-row">
+                        <label for="newTierInput">Add new Tier:</label>
+                        <input type="text" id="newTierInput">
+                    </div>
+                    <div class="form-row">
+                        <label for="newCostValue">Cost value:</label>
+                        <input type="number" id="newCostValue" name="Cost value" min="0" value="35.0" step="0.5">
+                    </div>
+                    <div class="form-row">
+                        <label for="newSellingPrice">Selling price:</label>
+                        <input type="number" id="newSellingPrice" name="Selling price" min="0" value="50.0" step="0.5">
+                    </div>
+                    <span onclick="newTier()" class="addBtn">Add</span>
+                </section>
+                <button class="close-button" id="closeTierPopupBtn"></button>
+            </div>
+        </div>
+        
+            <!-- Here we gonna add dynamically the li element with the glases -->
+        <ul class="glass-list" id="glassList">
+        </ul>
+
+        <script src="scripts.js"></script>
+    </body>
+
+</html>
+
+

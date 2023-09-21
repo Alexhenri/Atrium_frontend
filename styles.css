@@ -1,0 +1,352 @@
+body,
+ul,
+li {
+    font-family: tahoma;
+    margin: 0;
+    background-color: white;
+}
+
+header {
+    background-color: white;
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+
+.title {
+    width: 100%;
+    height: auto;
+    background-color: white;
+    display: inline-block;
+    padding: 3px 0px;
+    position: sticky;
+    border-bottom: 2px solid #000;
+}
+
+.title img {
+    width: 10%; 
+    display: block; 
+    margin-left: 0; 
+    margin-right: auto; 
+}
+
+.background {
+
+    width: 100%;
+    height: 460px;
+    border-bottom: 2px solid #000;
+    margin: 0;
+    padding: 0;
+
+}
+
+.background img {
+    width: 90%;
+    height: 100%; 
+}
+
+.addBtn {
+    padding: 9px 10px;
+    background-color: rgb(35, 32, 24);
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 2px;
+}
+
+.addBtn:hover {
+    background-color: #2ab53a;
+    color: white;
+}
+
+/* Styles for the pop-up container */
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+  text-align: center;
+  max-width: 400px;
+  width: 80%;
+}
+
+.divButtons {
+  margin-top: 20px;
+}
+
+/* Style for the close button */
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  color: #333;
+}
+
+/* Style for form inputs */
+.popup input[type="text"],
+.popup input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Style for the submit button */
+.popup button[type="submit"] {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Style for the submit button on hover */
+.popup button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Styles for the form rows */
+.form-row {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  justify-content: flex-start; 
+}
+
+.form-row label {
+  flex: 1;
+  text-align: left;
+  margin-right: 10px;
+}
+
+
+/* --------------------------------------------------------------------
+        Tried to create the switch like iphone to is Sunglasses 
+-------------------------------------------------------------------- */
+
+.newIsSunGlasses {
+  flex: 1;
+  text-align: left;
+  margin-right: 10px;
+}
+
+label.switch {
+    text-align: left;
+    width: 60px;
+    height: calc(150px / 6);
+    border-radius: 60px;
+    background-color: #4ed164;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    line-height: calc(150px / 2); /* Vertically center the text */
+}
+
+label.switch > span {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+label.switch > input[type="checkbox"] {
+    opacity: 0;
+    position: absolute;
+}
+
+label.switch > span:before,
+label.switch > span:after {
+    content: "";
+    cursor: pointer;
+    position: absolute;
+}
+
+label.switch > input[type="checkbox"]:focus ~ span {
+    box-shadow: 0 0 0 4px #43b556;
+}
+
+label.switch > input[type="checkbox"]:checked:focus ~ span {
+    box-shadow: 0 0 0 4px #fff;
+}
+
+label.switch > span {
+    border-radius: 60px;
+}
+
+label.switch > span:before {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    background-color: #f1f1f1;
+    border-radius: 60px;
+    transition: opacity .2s ease-out .1s, transform .2s ease-out .1s;
+    transform: scale(1);
+    opacity: 1;
+}
+
+label.switch > span:after {
+    top: 50%;
+    z-index: 3;
+    transition: transform .4s cubic-bezier(0.44, -0.12, 0.07, 1.15);
+    width: calc(60px / 2);
+    height: calc(150px / 6);
+    transform: translate3d(0, -50%, 0);
+    background-color: #fff;
+    border-radius: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .3);
+}
+
+label.switch > input[type="checkbox"]:checked ~ span:before {
+    transform: scale(0);
+    opacity: .7;
+}
+
+label.switch > input[type="checkbox"]:checked ~ span:after {
+    transform: translate3d(100%, -50%, 0);
+}
+/* --------------------------------------------------------------------
+                        Finished the switch part 
+-------------------------------------------------------------------- */
+
+.glass-list li {
+    display: flex;
+    align-items: center;
+    border-radius: 10px; 
+}
+
+.glass-image {
+    width: 100px;
+    height: 100px; 
+    margin-right: 20px; 
+}
+
+.glass-info {
+    flex-grow: 1;
+}
+
+.glass-info h2 {
+    margin: 0;
+}
+
+.glass-info p,
+.glass-info span {
+    margin: 5px 0;
+}
+
+/* Make the style to the attr in glass list */
+.glass-list .attr {
+  font-size: .85em;
+  display: block;
+  opacity: .6;
+  display: inline-block;
+  border: 1px solid #000;
+  border-radius: 10px; 
+  display: inline-block;
+  padding: 6px; 
+  margin: 2px; 
+  line-height: 10px; 
+  text-align: center;
+  height: 10px; 
+}
+
+/* Adjust glass list to show side to side */
+.glass-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none; 
+  padding: 0;
+}
+  
+/* Adjust the li elements to have 4 on each line */
+.glass-list li {
+    width: calc(25% - 10px);
+    margin-bottom: 20px; 
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.glass-list li h2 {
+  font-size: 18px;
+  margin: 0;
+}
+
+/* Adjust the image in  a box around the glass-info object */
+.glass-list li img {
+    max-width: 120px;
+    max-height: 100px;
+    align-self: left;
+}
+  
+/* Create a box around the glass-info object */
+.glass-info {
+    position: relative;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    transition: background-color 0.5s;
+    border-radius: 20px;
+}
+
+/* Change glass-info backgroung on hover */
+.glass-info:hover {
+    background-color: #ddd;
+}
+  
+/* Show delete button on hover */
+.glass-info:hover .delete-button{
+    opacity: 1; 
+}  
+  
+/* Delete button without any kind of background, top right in the li elements */
+.delete-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  background: transparent; 
+  border: none; 
+  padding: 0; 
+  width: 30px;
+  height: 30px; 
+  cursor: pointer;
+}
+  
+  /* Style to make the delete button look like a "X" */
+.delete-button:before {
+  content: "✕"; 
+  font-size: 20px; 
+  color: red; 
+}
+
+/* Close button without any kind of background, top right in the forms */
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  transition: opacity 0.3s ease;
+  border: none;
+  padding: 0; 
+  width: 30px; 
+  height: 30px;
+  cursor: pointer;
+  background: transparent;
+}
+
+/* Style to make the close button look like a "X" */
+.close-button:before {
+  content: "✕"; 
+  font-size: 20px; 
+  color: red; 
+}
